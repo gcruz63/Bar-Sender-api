@@ -1,0 +1,11 @@
+[
+    {
+        "model": "Bar_Sender_api.PaymentType",
+        "pk": 1,
+        "fields": {
+            "merchant_name": "American Express",
+            "acct_number": "1234567812345678",
+            "customer": 1
+        }
+    }
+]

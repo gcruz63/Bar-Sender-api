@@ -1,0 +1,23 @@
+[
+    {
+        "model": "Bar_Sender_api.AccountType",
+        "pk": 1,
+        "fields": {
+            "label": "Customer"
+        }
+    },
+    {
+        "model": "Bar_Sender_api.AccountType",
+        "pk": 2,
+        "fields": {
+            "label": "Store Owner"
+        }
+    },
+    {
+        "model": "Bar_Sender_api.AccountType",
+        "pk": 3,
+        "fields": {
+            "label": "Driver"
+        }
+    }
+]

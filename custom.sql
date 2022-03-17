@@ -1,0 +1,1 @@
+alter table Bar_Sender_api_product DROP column location

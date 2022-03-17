@@ -1,0 +1,23 @@
+[
+    {
+        "model": "Bar_Sender_api.Category",
+        "pk": 1,
+        "fields": {
+            "name": "Tequila"
+        }
+    },
+    {
+        "model": "Bar_Sender_api.Category",
+        "pk": 2,
+        "fields": {
+            "name": "]Whiskey"
+        }
+    },
+    {
+        "model": "Bar_Sender_api.Category",
+        "pk": 3,
+        "fields": {
+            "name": "Gin"
+        }
+    }
+]

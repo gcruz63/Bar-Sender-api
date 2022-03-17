@@ -1,0 +1,15 @@
+[
+    {
+        "model": "Bar_Sender_api.Product",
+        "pk": 1,
+        "fields": {
+            "name": "Jose Cuervo Tradicional Silver",
+            "store": 1,
+            "price": "20.00",
+            "description": "great tequila",
+            "quantity": 20,
+            "image_path": "https://www.totalwine.com/dynamic/x300,sq/media/sys_master/twmmedia/h1f/h87/14936407801886.png",
+            "category": 1
+        }
+    }
+]

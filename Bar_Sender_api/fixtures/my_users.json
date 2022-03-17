@@ -1,0 +1,13 @@
+[
+    {
+        "model": "Bar_Sender_api.MyUser",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "bio": "me",
+            "account_type": 1,
+            "phone": "1234567891",
+            "address": "1234 Red Road"
+        }
+    }
+]

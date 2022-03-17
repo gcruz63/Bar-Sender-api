@@ -1,0 +1,12 @@
+[
+    {
+        "model": "Bar_Sender_api.Store",
+        "pk": 1,
+        "fields": {
+            "name": "Ales and Spirts",
+            "description": "beer and liquor",
+            "is_active": true,
+            "my_user": 1
+        }
+    }
+]
