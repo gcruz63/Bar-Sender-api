@@ -25,9 +25,10 @@ router.register(r'payment-types', views.PaymentTypeView, 'payment_type')
 router.register(r'products', views.ProductView, 'product')
 router.register(r'stores', views.StoreView, 'store')
 router.register(r'profile', views.ProfileView, 'profile')
+router.register(r'users', views.MyUserView, 'users')
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('login', auth_token_views.obtain_auth_token),
+    path('login', views.login_user),
     path('register', views.register_user)
 ]

@@ -5,7 +5,7 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework import status
-from Bar_Sender_api.models import MyUser
+from Bar_Sender_api.models import MyUser, AccountType, account_type, my_user
 
 
 @api_view(['POST'])
@@ -19,9 +19,12 @@ def login_user(request):
 
     if authenticated_user is not None:
         token = Token.objects.get(user=authenticated_user)
+        my_user = MyUser.objects.get(user=authenticated_user)
         data = {
             'valid': True,
-            'token': token.key
+            'token': token.key,
+            'MyUser': my_user.id,
+            'account_type': my_user.account_type.id
         }
         return Response(data)
 
@@ -43,18 +46,21 @@ def register_user(request):
         username=request.data['username'],
         password=request.data['password'],
         first_name=request.data['first_name'],
-        last_name=request.data['last_name']
+        last_name=request.data['last_name'],
     )
 
     my_user = MyUser.objects.create(
         bio=request.data['bio'],
-        user=new_user
+        user=new_user,
+        accountType=request.data['account_type']
     )
 
     token = Token.objects.create(user=my_user.user)
 
     data = {
-        'token': token.key
+        'token': token.key,
+        'userId': my_user.id,
+        'accountType': account_type.id
     }
 
     return Response(data)

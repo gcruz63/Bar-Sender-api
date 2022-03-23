@@ -23,6 +23,7 @@ class ProfileView(ViewSet):
     def edit(self, request):
         """Edit the current user's profile"""
         user = request.auth.user
+        user.account_type = request.data['account_type']
         user.username = request.data['username']
         user.first_name = request.data['first_name']
         user.last_name = request.data['last_name']

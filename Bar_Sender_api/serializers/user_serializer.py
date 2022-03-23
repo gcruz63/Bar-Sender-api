@@ -6,7 +6,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('username', 'first_name', 'last_name', 'orders',
-                  'store')
+                  'store', 'account_type')
         depth = 1
 
 
@@ -15,3 +15,4 @@ class CreateUserSerializer(serializers.Serializer):
     password = serializers.CharField(required=False)
     first_name = serializers.CharField()
     last_name = serializers.CharField()
+    account_type = serializers.CharField()
